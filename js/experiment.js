@@ -47,10 +47,12 @@ function initExperiment() {
 		var cells = records[i].split(",");
 		var menuType = cells[0].trim();
 		var menuDepth = cells[1].trim();
-		var targetItem = cells[2].trim();
+        var inputStyle = cells[2].trim();
+		var targetItem = cells[3].trim();
 		trialsData[i] = {
 			'Menu Type': menuType,
 			'Menu Depth': menuDepth,
+            'Input Style': inputStyle,
 			'Target Item': targetItem
 		};
 	}
@@ -102,6 +104,7 @@ function nextTrial() {
 		tracker.trial = currentTrial;
 		tracker.menuType = menuType;
 		tracker.menuDepth = menuDepth;
+        tracker.inputStyle = inputStyle;
 		tracker.targetItem = targetItem;
 
 		if (menuType === "Marking") {
