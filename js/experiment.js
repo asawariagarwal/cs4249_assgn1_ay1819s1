@@ -21,6 +21,7 @@ var radialMenuL3 = [];
 var tracker = new ExperimentTracker();
 var markingMenuSubscription = null;
 var radialMenuSvg = null;
+var participantID = null;
 
 
 
@@ -32,6 +33,14 @@ function getData(relativePath) {
 	xmlHttp.open("GET", relativePath, false);
 	xmlHttp.send(null);
 	return xmlHttp.responseText;
+}
+
+function beginExperiment(e){
+    participantID = document.getElementById("participantID").innerHTML;
+    var experiment = document.getElementById("experiment");
+    var interface = document.getElementById("interface");
+    experiment.style.display = "block";
+    interface.style.display = "none";
 }
 
 
@@ -101,6 +110,7 @@ function nextTrial() {
 		// Set IV3 state over here
 
 		tracker.newTrial();
+        tracker.participantID = participantID;
 		tracker.trial = currentTrial;
 		tracker.menuType = menuType;
 		tracker.menuDepth = menuDepth;
