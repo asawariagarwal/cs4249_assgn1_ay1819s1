@@ -87,7 +87,7 @@ function nextTrial() {
 
 		var menuType = trialsData[currentTrial]['Menu Type'];
 		var menuDepth = trialsData[currentTrial]['Menu Depth'];
-        var menuDepth = trialsData[currentTrial]['Input Style'];
+        var inputStyle = trialsData[currentTrial]['Input Style'];
 		var targetItem = trialsData[currentTrial]['Target Item'];
 
 		document.getElementById("trialNumber").innerHTML = String(currentTrial) + "/" + String(numTrials);
