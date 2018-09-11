@@ -38,9 +38,9 @@ function getData(relativePath) {
 function beginExperiment(e){
     participantID = document.getElementById("participantID").innerHTML;
     var experiment = document.getElementById("experiment");
-    var interface = document.getElementById("interface");
+    var experimentInterface = document.getElementById("experimentInterface");
     experiment.style.display = "block";
-    interface.style.display = "none";
+    experimentInterface.style.display = "none";
 }
 
 
