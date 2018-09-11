@@ -153,6 +153,10 @@ function nextTrial() {
 	    var nextButton = document.getElementById("nextButton");
 	    nextButton.innerHTML = "Done";
 		tracker.toCsv();
+        var experiment = document.getElementById("experiment");
+        var experimentInterface = document.getElementById("experimentInterface");
+        experiment.style.display = "none";
+        experimentInterface.style.display = "block";
 	}
 }
 
