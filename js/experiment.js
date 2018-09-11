@@ -36,7 +36,7 @@ function getData(relativePath) {
 }
 
 function beginExperiment(e){
-    participantID = document.getElementById("participantID").innerHTML;
+    participantID = document.getElementById("participantID").value;
     var experiment = document.getElementById("experiment");
     var experimentInterface = document.getElementById("experimentInterface");
     experiment.style.display = "block";
