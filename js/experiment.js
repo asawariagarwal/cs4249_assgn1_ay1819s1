@@ -41,6 +41,9 @@ function beginExperiment(e){
     var experimentInterface = document.getElementById("experimentInterface");
     experiment.style.display = "block";
     experimentInterface.style.display = "none";
+    
+    //Start the first trial
+    nextTrial();
 }
 
 
@@ -79,8 +82,6 @@ function initExperiment() {
 	radialMenuL2 = formatRadialMenuData(menuL2Data);
 	radialMenuL3 = formatRadialMenuData(menuL3Data);
 	
-	//Start the first trial
-	nextTrial();
 }
 
 // Wrapper around nextTrial() to prevent click events while loading menus
@@ -153,7 +154,7 @@ function nextTrial() {
 	    var nextButton = document.getElementById("nextButton");
 	    nextButton.innerHTML = "Done";
 		tracker.toCsv();
-        document.getElementById("participantID").value() ='';
+        document.getElementById("participantID").value ='';
         var experiment = document.getElementById("experiment");
         var experimentInterface = document.getElementById("experimentInterface");
         experiment.style.display = "none";
