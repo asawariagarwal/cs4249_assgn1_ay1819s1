@@ -2,6 +2,12 @@ Menu Type,Menu Depth,Input Style,Target Item
 Marking,1,Touch,Clothing
 Marking,2,Touch,Hats
 Marking,3,Touch,Jeans
+Marking,1,Stylus,Clothing
+Marking,2,Stylus,Hats
+Marking,3,Stylus,Jeans
+Radial,1,Touch,Clothing
+Radial,2,Touch,Hats
+Radial,3,Touch,Jeans
 Radial,1,Stylus,Clothing
 Radial,2,Stylus,Hats
 Radial,3,Stylus,Jeans
