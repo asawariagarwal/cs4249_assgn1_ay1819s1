@@ -42,19 +42,29 @@ function beginExperiment(e){
     experiment.style.display = "block";
     experimentInterface.style.display = "none";
     
-    //Start the first trial
-    nextTrial();
+    //Init the experiment
+    initExperiment();
 }
 
 
 // Loads the CSV data files on page load and store it to global variables
 function initExperiment() {
-
+    trialsData = [];
+    radialMenuTree = null;
+    tracker = new ExperimentTracker();
+    markingMenuSubscription = null;
+    radialMenuSvg = null;
+    
 	// Get Trails
 	var data = getData(trialsFile);
 
 	var records = data.split("\n");
 	numTrials = records.length - 1;
+    currentTrial = 1;
+    
+    var nextButton = document.getElementById("nextButton");
+    nextButton.innerHTML = "Done";
+    
 	for (var i = 1; i <= numTrials; i++) {
 		var cells = records[i].split(",");
 		var menuType = cells[0].trim();
@@ -81,6 +91,9 @@ function initExperiment() {
 	radialMenuL1 = formatRadialMenuData(menuL1Data);
 	radialMenuL2 = formatRadialMenuData(menuL2Data);
 	radialMenuL3 = formatRadialMenuData(menuL3Data);
+    
+    //Start the first trial
+    nextTrial();
 	
 }
 
