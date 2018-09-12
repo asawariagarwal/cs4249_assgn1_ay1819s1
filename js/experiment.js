@@ -63,7 +63,7 @@ function initExperiment() {
     currentTrial = 1;
     
     var nextButton = document.getElementById("nextButton");
-    nextButton.innerHTML = "Done";
+    nextButton.innerHTML = "Next";
     
 	for (var i = 1; i <= numTrials; i++) {
 		var cells = records[i].split(",");

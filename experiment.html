@@ -17,10 +17,14 @@
 
   </head>
   <body>
-    <div class="row" id="experimentInterface" style="display:block;">
-        <div class="row" id="instructions">
+    <div class="container" id="experimentInterface" style="display:block;">
+        <div class="row" id="heading">
+        <h1>Experiment to Compare Marking and Radial menus</h1>
+        </div>
+        <div class="row" id="instructionsBasic">
         <p>This experiment is designed to compare the performance of marking and radial menus. Please follow the instructions given below to participant in the experiment:</p>
-        </br>
+        </div>
+        <div class="row" id="instructionsList">
         <ul>
         <li>Please fill in your NRIC/Student ID in the field below before starting the experiement.</li>
         <li>On the separate pre questionnaire provided to you, please fill out your ID as well as other required details.</li>
@@ -28,14 +32,14 @@
         <li>Using the conditions as a guide, please select the taregt value from the given menu.</li>
         <li>For the marking menu to appear you will need to press mouse button and scroll down. Once it appears, to select an item just drag your curson to the appropriate value.</li>
         <li>For the Radial menu to appear, please press the right mouse button. Once it appears, just left click the appropriate menu item.</li>
-        <li>After making the selection, please clink on the Next button. You can make multiple attempts in the same experiemnt condition before clicking the next button. Each attempt will be recorded.</li>
+        <li>After making the selection, please click on the Next button. You can make multiple attempts in the same experiment condition before clicking the next button. Each attempt will be recorded.</li>
         <li>You can check the procgress on the leftmost cell in the table.</li>
         <li>Once the experiment is finished, please click on the Done button and wait for it to download the results.</li>
         <li>Please do not forget to fill out the post experiemnt questionnaire handed over to you.</li>
         </ul>
         </div>
         <div class="row" id="id">
-            Enter ID: <input type="text" name="participantID" id="participantID" placeholder="ParticipantID">
+        Enter ID:     <input type="text" name="participantID" id="participantID" placeholder="ParticipantID">
         </div>
         <div class="row" id="beginExperiment">
         <button id="beginExperimentButton" type="button" class="btn btn-block btn-primary btn-lg" onclick="beginExperiment(event)">Begin Experiment</button>
